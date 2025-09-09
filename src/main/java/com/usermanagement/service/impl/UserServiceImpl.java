@@ -80,6 +80,7 @@ public class UserServiceImpl implements UserService {
         UserDto dto=new UserDto();
         dto.setName(user.getName());
         dto.setEmail(user.getEmail());
+        dto.setPhNo(user.getPhNo());
         dto.setUpdatedPwd(user.getUpdatedPwd());
 
         CountryMaster country=countryRepo.findById(user.getCountry().getId()).orElseThrow();

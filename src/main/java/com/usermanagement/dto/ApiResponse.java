@@ -1,8 +1,16 @@
 package com.usermanagement.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
-public class ApiResponse {
+@AllArgsConstructor
+@NoArgsConstructor
+public class ApiResponse<T> {
+
+    private String status;
+    private String message;
+    private T data;
 
 }
